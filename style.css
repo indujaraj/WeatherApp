@@ -20,6 +20,7 @@ body{
 }
 
 .search-box{
+    text-decoration: white;
     position: absolute;
     top:48%;
     left:50%;
@@ -35,7 +36,7 @@ body{
     padding: 0.6px;
 }
 .search-box:hover .search-btn{
-    background: white;
+    background: black;
 
 }
 .search-btn{
@@ -53,9 +54,9 @@ body{
 }
 .search-txt{
     border:none;
-    background: none;
+    background:none;
     outline:none;
-    
+    color:white;
     float:left;
     font-size: 16px;
     transition:0.3s ease;
