@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+</head>
+<body>
+    <div class="search-box">
+        <input type="text" id="city" class="search-txt" placeholder="Enter place">
+        <a class="search-btn"href="#"><i class="fas fa-search" onclick=getWeather() type="button"></i></a>
+       
+
+    </div>
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4" id="result">Weather reports</div>
+        <div class="col-4"></div>
+    </div>
+    
+    <script>
+        function getWeather(){
+            let place=city.value;
+            fetch(`https://api.openweathermap.org/data/2.5/find?q=${place}&appid=6fa99e1f96f024f79970c5a3532b2ac6`).
+            then(res=>res.json()).then(data=>displayweather(data))
+        }
+        function displayweather(data){
+            
+            let place_name=data.list[0].name
+            let temperature=data.list[0].main.temp
+            let windspeed=data.list[0].wind.speed
+            let type=data.list[0].weather[0].main
+            let html_value=`
+            <div class="card" style="width: 18rem;">
+  
+            <div class="card-body">
+            
+            </div>
+            <ul class="list-group list-group-flush">
+            <li class="list-group-item">Name:${place_name}</li>
+            <li class="list-group-item">Temperature:${temperature}</li>
+            <li class="list-group-item">Windspeed:${windspeed}</li>
+            <li class="list-group-item">Type:${type}</li>
+            </ul>
+           
+        </div>
+            `
+            document.querySelector("#result").innerHTML=html_value
+            
+         }
+    </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+body{
+    margin: 0%;
+    padding: 0%;
+    background-image: url(./Images/weather.jpg);
+    background-size: cover;
+    
+    
+}
+#result{
+    background-color:black;
+    color:orangered;
+    width:15%;
+    
+    height:100px;
+    margin-top: 26%;
+    margin-left:50%;
+   
+  
+   
+}
+
+.search-box{
+    position: absolute;
+    top:48%;
+    left:50%;
+    background:black;
+    border-radius: 40px;
+    transform: translate(-50%,-50%);
+    height:40px;
+    padding: 10px;
+}
+.search-box:hover .search-txt{
+    width:220px;
+    padding: 0.6px;
+}
+.search-box:hover .search-btn{
+    background: white;
+
+}
+.search-btn{
+    text-decoration: none;
+    background: black;
+    color:orangered;
+    display:flex;
+    float:right;
+    justify-content: center;
+    align-items: center;
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+
+}
+.search-txt{
+    border:none;
+    background: none;
+    outline:none;
+    color:white;
+    float:left;
+    font-size: 16px;
+    transition:0.3s ease;
+    line-height: 40px;
+    width:0px;
+}
