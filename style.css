@@ -7,14 +7,22 @@ body{
     
     
 }
+h1{
+    font-family: 'Dancing Script', cursive;
+    color:orangered;
+    margin-top: 10px;
+
+}
 #result{
    
     width:15%;
-    
+    background-color: black;
+    color: orangered;
     height:100px;
-    margin-top: 26%;
+   margin-top: 26%;
     margin-left:50%;
-   
+    font-family: 'Dancing Script', cursive;
+  
   
    
 }
@@ -22,13 +30,13 @@ body{
 .search-box{
     text-decoration: white;
     position: absolute;
-    top:48%;
-    left:50%;
+    top:15%;
+    left:15%;
     background:black;
     border-radius: 40px;
     transform: translate(-50%,-50%);
-    width:50px;
-    height:40px;
+    width:60px;
+    height:60px;
     padding: 10px;
 }
 .search-box:hover .search-txt{
